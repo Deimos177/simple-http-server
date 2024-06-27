@@ -23,5 +23,4 @@ jobs:
       - name: Deploy
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
-          SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
         run: make deploy
