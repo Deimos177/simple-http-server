@@ -6,6 +6,7 @@ build:
 
 send-exe-to-remote-server: build
 	@echo "Sending the executable to the remote server..."
+	ssh -t ec2-user@$(SERVER_IP) 'sudo systemctl stop http-server'
 	scp ./dist/simple-http-server ec2-user@$(SERVER_IP):/home/ec2-user/
 
 send-service-file-to-remote-server:
