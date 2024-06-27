@@ -1,0 +1,17 @@
+[Unit]
+Description=Simple HTTP Server
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=ec2-user
+WorkingDirectory=/home/ec2-user
+ExecStart=/home/ec2-user/simple-http-server
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
