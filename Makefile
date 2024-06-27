@@ -1,5 +1,3 @@
-SHELL := "C:/Program Files/Git/bin/bash.exe"
-
 build:
 	@echo "Building the project..."
 	GOOS=linux GOARCH=amd64 go build -o dist/simple-http-server
